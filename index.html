@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>КаклькуАIтор</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="input">
+                <input type="text" class="input-field" id="expression" placeholder="Введите выражение" autofocus>
+            </div>
+            <div class="output" id="result">0</div>
+            <div class="error" id="error"></div>
+        </div>
+        <div class="keypad">
+            <button class="clear" onclick="clearAll()">C</button>
+            <button onclick="appendToInput('(')">(</button>
+            <button onclick="appendToInput(')')">)</button>
+            <button class="operator" onclick="appendToInput('/')">/</button>
+            
+            <button onclick="appendToInput('7')">7</button>
+            <button onclick="appendToInput('8')">8</button>
+            <button onclick="appendToInput('9')">9</button>
+            <button class="operator" onclick="appendToInput('*')">×</button>
+            
+            <button onclick="appendToInput('4')">4</button>
+            <button onclick="appendToInput('5')">5</button>
+            <button onclick="appendToInput('6')">6</button>
+            <button class="operator" onclick="appendToInput('-')">-</button>
+            
+            <button onclick="appendToInput('1')">1</button>
+            <button onclick="appendToInput('2')">2</button>
+            <button onclick="appendToInput('3')">3</button>
+            <button class="operator" onclick="appendToInput('+')">+</button>
+            
+            <button onclick="appendToInput('0')">0</button>
+            <button onclick="appendToInput('.')">.</button>
+            <button class="equals" id="button-gpt">Подумать</button>
+        </div>
+    </div>
+
+    <div class="custom-buttons">
+        <div class="custom-controls">
+            <h2>Создайте свой оператор или функцию!</h2>
+            <input type="text" id="customButtonText" placeholder="Текст кнопки (например: Cos)">
+            <button onclick="addCustomButton()">Добавить</button>
+        </div>
+        <div class="custom-buttons-container" id="customButtonsContainer">
+            
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
